@@ -9,7 +9,6 @@ import { handleProxyError } from "./middleware/common";
 import {
   addKey,
   addAnthropicPreamble,
-  blockZoomers,
   createPreprocessorMiddleware,
   finalizeBody,
   languageFilter,
@@ -72,7 +71,6 @@ const rewriteAnthropicRequest = (
   const rewriterPipeline = [
     addKey,
     addAnthropicPreamble,
-    blockZoomers,
     languageFilter,
     limitOutputTokens,
     finalizeBody,
